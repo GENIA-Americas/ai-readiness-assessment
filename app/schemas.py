@@ -38,7 +38,6 @@ class QuestionnaireResponses(BaseModel):
 class AssessmentCreate(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
-    org_name: str = Field(min_length=1, max_length=200)
     sector: str = Field(min_length=1, max_length=100)
     org_size: OrgSize
     responses: QuestionnaireResponses
